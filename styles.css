@@ -1,0 +1,18 @@
+body {
+    background-color: #3700B3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.title {
+    text-align: center;
+}
+
+.control-panel {
+    display: flex;
+    justify-content: center;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+}
