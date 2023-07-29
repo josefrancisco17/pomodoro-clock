@@ -5,12 +5,12 @@ var remainingtime = 0;
 
 window.onload = function () {
     test();
-    $(".time").text("30:00");
+    $(".time").text("25:00");
 }
 
-$(document).on('click', '.button-playback', function () {
+$(document).on('click', '.playback', function () {
     if (started == 0) {
-        reset()
+        start();
     } else if (started == 1) {
         if (paused == 0) {
             pause();
@@ -21,20 +21,20 @@ $(document).on('click', '.button-playback', function () {
 });
 
 
-$(document).on('click', '.button-reset', function () {
+$(document).on('click', '.reset', function () {
     reset();
 });
 
 
 function pause() {
     paused = 1;
-    $(".button-playback").text("resume");
+    $(".playback").text("resume");
     clearInterval(intervalId);
 }
 
 function resume() {
     paused = 0;
-    $(".button-playback").text("pause");
+    $(".playback").text("pause");
     if (remainingtime > 0) {
         end = new Date(Date.now() + remainingtime);
         intervalId = setInterval(function () {
@@ -43,6 +43,9 @@ function resume() {
             remainingtime = distance;
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
             var text = minutes + ":" + seconds;
             $(".time").text(text);
 
@@ -54,8 +57,8 @@ function resume() {
     }
 }
 
-function reset() {
-    $(".button-playback").text("pause");
+function start() {
+    $(".playback").text("pause");
     clearInterval(intervalId);
     remainingtime = 0;
     paused = 0;
@@ -64,7 +67,11 @@ function reset() {
         clearInterval(intervalId);
     }
     var end = new Date(Date.now());
-    end.setMinutes(end.getMinutes() + 30);
+    end.setMinutes(end.getMinutes() + 25);
+    end.setSeconds(end.getSeconds() + 1);
+
+    var end = new Date(Date.now());
+    end.setMinutes(end.getMinutes() + 25);
     end.setSeconds(end.getSeconds() + 1);
 
     intervalId = setInterval(function () {
@@ -73,6 +80,9 @@ function reset() {
         remainingtime = distance;
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
         var text = minutes + ":" + seconds;
         $(".time").text(text);
 
@@ -82,12 +92,14 @@ function reset() {
         }
     }, 1000);
 }
-
-
-function test() {
-    x = setInterval(function () {
-        console.log("Started: " + started);
-        console.log("Paused: " + paused);
-        console.log("Remainingtime: " + remainingtime);
-    }, 1000);
+function reset() {
+    $(".playback").text("start");
+    clearInterval(intervalId);
+    remainingtime = 0;
+    paused = 0;
+    started = 0;
+    if (intervalId) {
+        clearInterval(intervalId);
+        $(".time").text("25:00");
+    }
 }

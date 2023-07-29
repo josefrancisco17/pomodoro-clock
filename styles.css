@@ -3,7 +3,16 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.painel {
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
 .title {
+    color: black;
     text-align: center;
 }
 
@@ -14,5 +23,37 @@ body {
 
 .clock {
     display: flex;
+    color:white;
     justify-content: center;
+}
+
+
+.circle-out {
+    padding: 25px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 1px white solid;
+}
+
+.circle-in {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 1px white solid;
+}
+
+.time {
+    display: flex;
+    color:white;
+    justify-content: center;
+    margin-top: 75px;
+    font-size: 5rem;
+}
+
+.btn {
+    width: 100px;
+    height: 50px;
+    margin: 0.5rem;
+    border-radius: 12px;
 }
