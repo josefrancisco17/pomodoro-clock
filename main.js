@@ -4,12 +4,12 @@ var paused = 0;
 var remainingtime = 0;
 
 window.onload = function () {
-    test();
     $(".time").text("25:00");
 }
 
 $(document).on('click', '.playback', function () {
     if (started == 0) {
+        start_progress();
         start();
     } else if (started == 1) {
         if (paused == 0) {
@@ -102,4 +102,25 @@ function reset() {
         clearInterval(intervalId);
         $(".time").text("25:00");
     }
+}
+
+function start_progress() {
+    let circularProgress = $(".circular-progress");
+    let progressValue = $(".progress-value");
+    
+    let progressStartValue = 0;   
+    let progressEndValue = 100;  
+    let speed = 937.5;
+        
+    let progress = setInterval(() => {
+        progressStartValue++;
+    
+        progressValue = progressStartValue; 
+        progressValue *= 0.225;
+        console.log(progressValue)
+        $(".circular-progress").css({"background": "conic-gradient(#7d2ae8 " + progressValue + "deg, #ededed 0deg)"});
+        if(progressStartValue == progressEndValue){
+            clearInterval(progress);
+        }    
+    }, speed);
 }
