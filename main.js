@@ -106,8 +106,7 @@ function reset() {
 
 function start_progress() {
     let circularProgress = $(".circular-progress");
-    let progressValue = $(".progress-value");
-    
+    let progressValue = 0;
     let progressStartValue = 0;   
     let progressEndValue = 100;  
     let speed = 937.5;
@@ -118,7 +117,7 @@ function start_progress() {
         progressValue = progressStartValue; 
         progressValue *= 0.225;
         console.log(progressValue)
-        $(".circular-progress").css({"background": "conic-gradient(#7d2ae8 " + progressValue + "deg, #ededed 0deg)"});
+        $(".circular-progress").css({"background": "conic-gradient(#ff5500 " + progressValue + "deg, #ededed 0deg)"});
         if(progressStartValue == progressEndValue){
             clearInterval(progress);
         }    

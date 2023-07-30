@@ -1,25 +1,45 @@
 body {
-    background-color: #3700B3;
+    font-family: Poppins;
+    background-color: #141414;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.container {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
 .painel {
-    width: 500px;
-    margin-top: 300px;
+    padding: 4%;
+    margin-top: 200px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 50px;
     border-radius: 8px;
-    background-color: blueviolet;
+    background-color: #191919;
+
+}
+
+.painel:hover {
+    box-shadow: 25px 25px 3px 3px #ff5500;
+    transition-duration: 0.5s;
 }
 
 .title {
-    color: black;
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #ff5500;
     text-align: center;
+    margin-top: px;
 }
 
 .control-panel {
@@ -29,7 +49,6 @@ body {
 
 .clock {
     display: flex;
-    color:white;
     justify-content: center;
 }
 
@@ -38,7 +57,7 @@ body {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    background: conic-gradient(#7d2ae8 0deg, #ededed 0deg);
+    background: conic-gradient(#ff5500 0deg, #ededed 0deg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,7 +69,7 @@ body {
     height: 260px;
     width: 260px;
     border-radius: 50%;
-    background-color: blueviolet;
+    background-color: #171717;
 }
 
 .progress-value {
@@ -62,7 +81,7 @@ body {
 
 .time {
     display: flex;
-    color:white;
+    color:#ff5500;
     justify-content: center;
     margin-top: 15px;
     font-size: 5rem;
@@ -70,8 +89,33 @@ body {
 }
 
 .btn {
+    font-family: Poppins;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #ff5500;
+    border-color: #ff5500;
     width: 100px;
     height: 50px;
     margin: 0.5rem;
     border-radius: 12px;
 }
+
+.btn:hover {
+    background-color: #ff5500;
+    color: white;
+    border-color: #ff5500;
+}
+
+.footer {
+    margin-top: 25px;
+}
+
+.social-media {
+    margin-bottom: 25px; 
+    color: #202020;
+}
+
+.social-media:hover {
+    color: blue;
+}
+
