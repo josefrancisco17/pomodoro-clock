@@ -113,7 +113,7 @@ function start_progress() {
         
     let progress = setInterval(() => {
         progressStartValue++;
-    
+
         progressValue = progressStartValue; 
         progressValue *= 0.225;
         console.log(progressValue)
