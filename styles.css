@@ -1,11 +1,10 @@
 body {
     font-family: Poppins;
-    background-color: #141414;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 50%);
 }
 
 .container {
@@ -16,20 +15,19 @@ body {
     gap: 50px;
 }
 
-.painel {
+.painel { 
     padding: 4%;
     margin-top: 200px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 50px;
-    border-radius: 8px;
-    background-color: #191919;
-
+    border-radius: 15px;
+    background-color: #ff55000c;
 }
 
 .painel:hover {
-    box-shadow: 25px 25px 3px 3px #ff5500;
+    box-shadow: 15px 15px 1px 1px #ff550094;
     transition-duration: 0.5s;
 }
 
@@ -37,7 +35,7 @@ body {
     font-family: Poppins;
     font-weight: 700;
     font-size: 3rem;
-    color: #ff5500;
+    color: #ff5500f6;
     text-align: center;
     margin-top: px;
 }
@@ -57,7 +55,7 @@ body {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    background: conic-gradient(#ff5500 0deg, #ededed 0deg);
+    background: conic-gradient(#ff5500f6 0deg, #ededed 0deg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,8 +78,9 @@ body {
 }
 
 .time {
+    font-family: ;
     display: flex;
-    color:#ff5500;
+    color:#ff5500f6;
     justify-content: center;
     margin-top: 15px;
     font-size: 5rem;
@@ -89,11 +88,10 @@ body {
 }
 
 .btn {
-    font-family: Poppins;
     font-size: 1.2rem;
     font-weight: bolder;
-    color: #ff5500;
-    border-color: #ff5500;
+    color: #ff5500f6;
+    border-color: #ff5500f6;
     width: 100px;
     height: 50px;
     margin: 0.5rem;
@@ -101,9 +99,9 @@ body {
 }
 
 .btn:hover {
-    background-color: #ff5500;
+    background-color: #ff5500f6;
     color: white;
-    border-color: #ff5500;
+    border-color: #ff5500f6;
 }
 
 .footer {
