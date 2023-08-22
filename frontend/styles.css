@@ -1,0 +1,117 @@
+body {
+    font-family: Poppins;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.container {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.painel { 
+    padding: 4%;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 15px;
+    background-color:#ff550038;
+}
+
+.painel:hover {
+    box-shadow: 15px 15px 1px 1px #ff550094;
+    transition-duration: 0.5s;
+}
+
+.title {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #ff5500f6;
+    text-align: center;
+    margin-top: px;
+}
+
+.control-panel {
+    display: flex;
+    justify-content: center;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+}
+
+.circular-progress {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: conic-gradient(#ff5500f6 0deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress::before {
+    content:"";
+    position: absolute;
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    background-color: #171717;
+}
+
+.progress-value {
+    position: relative; 
+    font-size: 40px;
+    font-weight: 600;
+    color: blue;
+}
+
+.time {
+    display: flex;
+    color:#ff5500f6;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 5rem;
+    z-index: 1;
+}
+
+.btn {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #ff5500f6;
+    border-color: #ff5500f6;
+    width: 100px;
+    height: 50px;
+    margin: 0.5rem;
+    border-radius: 12px;
+}
+
+.btn:hover {
+    background-color: #ff5500f6;
+    color: white;
+    border-color: #ff5500f6;
+}
+
+.footer {
+    margin-top: 25px;
+}
+
+.social-media {
+    margin-bottom: 25px; 
+    color: #202020;
+}
+
+.social-media:hover {
+    color: blue;
+}
+
