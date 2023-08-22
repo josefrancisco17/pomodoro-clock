@@ -1,6 +1,7 @@
 POMODORO CLOCK
 
 How to run:
+
 1.download source files
 
 2.npm install
